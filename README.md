@@ -34,5 +34,10 @@ then cd to virtual environments
 10. git remote -v (Verifies the new remote URL)
 11. git push origin master (Pushes the changes in your local repository up to the remote repository you specified as the origin)
 
-
+####Seems like upon further research and reflection, might be better not saving the virual environment in my project, but just the info needed to recreate it:
+1. pip freeze > requirements.txt (OK, already doing that)
+2. can be loaded with: pip install -r requirements.txt
+3. RyanBrady showed how you can string the deploy statements in a single line:
+virtualenv --no-site-packages --distribute .env && source .env/bin/activate && pip install
+4. will continue to experiment as this would presumably work with the wrapper?
 
